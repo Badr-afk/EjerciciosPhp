@@ -7,7 +7,25 @@
 </head>
 <body>
     <?php 
-        
+    //Nombre de la clase en mayuscula
+    class Fruit{
+    //Propiedades
+    private  $name;
+    private  $color;
+    //Metodos
+    function __construct($name,$color)
+    { //Constructor
+        $this->name=$name;
+        $this->color=$color;
+    }
+    function set_name($name){
+        //setter
+
+        $this->name=$name;
+    }
+
+    
+    } 
     ?>
 </body>
 </html>

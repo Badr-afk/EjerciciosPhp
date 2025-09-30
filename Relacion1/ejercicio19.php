@@ -8,17 +8,21 @@
 <body>
     <?php
 
-$numeroDecimal = 25;
+$numero = 360;
+$base=8;
+$resultado="";
 
-// Validar que sea un número natural (entero no negativo)
-if (is_numeric($numeroDecimal) && $numeroDecimal >= 0 && floor($numeroDecimal) == $numeroDecimal) {
-    // Convertir a binario usando la función decbin()
-    $numeroBinario = decbin($numeroDecimal);
-
-    echo "El número decimal $numeroDecimal en binario es: $numeroBinario";
-} else {
-    echo "Por favor, ingresa un número natural (entero no negativo).";
+echo "El numero  original es $numero y la base a la que pasarlo $base";
+echo "<br> el resultado es: ";
+while ($numero>=$base){
+    $resultado=(string) $numero % $base . '-' . $resultado; //Casting eplicito
+    //casting explicito de un numero entero en un dato tipo string
+    $cociente = intval($numero/$base);
+    $numero=$cociente;
 }
+
+echo (string)$numero. '-' . $resultado;
+
 ?>
 
 </body>
