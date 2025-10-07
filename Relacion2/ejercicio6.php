@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 </head>
-<body class="">
-    <ul>
-        <li><a href="ejercicio1.php">Ejercicio 1</a></li>
-        <li><a href="ejercicio6.php">ejercicio 6</a></li>
-    </ul>
+<body>
+    <div>
+        <table class="table table striped">
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Telefono</th>
+            </tr>
+        </table> 
+    </div>
 </body>
 </html>
