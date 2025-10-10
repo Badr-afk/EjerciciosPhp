@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             case 'division':
                 if ($numero2 != 0) {
                     $resultado = $numero1 / $numero2;
-                } else {
+                } else{
                     echo "<p style='color:red;'>No se puede dividir por 0</p>";
                 }
                 break;
@@ -101,6 +101,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
 </body>
 </html>
