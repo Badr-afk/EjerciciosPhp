@@ -10,7 +10,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nota1 = $_GET['nota1'];
     $nota2 = $_GET['nota2'];
-    $fallos= $_GET['fallos']
+    $fallos= $_GET['fallos'];
 
     if (is_numeric($nota1) && is_numeric($nota2)) {
         $media = ($nota1 + $nota2) / 2;
