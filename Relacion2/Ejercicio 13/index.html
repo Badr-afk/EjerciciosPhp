@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Nota Final</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="h3 mb-0 text-center">Calcular Evaluación</h4>
+            </div>
+
+            <form action="calcEvaluacion.php" method="get" onsubmit="return validarForm()">
+                <div class="card-body">
+
+                    <div class="mb-3">
+                        <label for="notaIn" class="form-label">Nota Inicial</label>
+                        <input type="text" class="form-control" id="notaIn" name="notaIn">
+                        <div id="notaInhelp" class="form-text text-danger" style="visibility: hidden;">Error debe ser un número</div>
+                        <div id="notaInrango" class="form-text text-danger" style="visibility: hidden;">Error:Rango incorrecto</div>
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="notaPrim" class="form-label">Nota Primera</label>
+                        <input type="text" class="form-control" id="notaPrim" name="notaPrim">
+                        <div id="notaPrimhelp" class="form-text text-danger" style="visibility: hidden;">Error debe ser un número</div>
+                        <div id="notaPrimrango" class="form-text text-danger" style="visibility: hidden;">Error:Rango incorrecto</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="notaSeg" class="form-label">Nota Segunda</label>
+                        <input type="text" class="form-control" id="notaSeg" name="notaSeg">
+                        <div id="notaSeghelp" class="form-text text-danger" style="visibility: hidden;">Error debe ser un número</div>
+                        <div id="notaSegrango" class="form-text text-danger" style="visibility: hidden;">Error:Rango incorrecto</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="notaTer" class="form-label">Nota Tercera</label>
+                        <input type="text" class="form-control" id="notaTer" name="notaTer">
+                        <div id="notaTerhelp" class="form-text text-danger" style="visibility: hidden;">Error debe ser un número</div>
+                        <div id="notaTerrango" class="form-text text-danger" style="visibility: hidden;">Error:Rango incorrecto</div>
+                    </div>
+
+                    <div class="d-grid mt-3">
+                        <button type="submit" class="btn btn-primary">Calcular</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<script src="validacion.js"></script>
+</body>
+
+</html>
