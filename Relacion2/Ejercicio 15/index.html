@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial de un número</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="h3 mb-0 text-center">Calcular Factorial de un número</h4>
+            </div>
+
+            <form action="Factorial.php" method="get"  onsubmit="return validarForm()">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="num" class="form-label">Numero que quieres calcularle el factorial</label>
+                        <input type="text" class="form-control" id="num" name="num">
+                        <div id="numhelp" class="form-text text-danger" style="visibility: hidden;">Error debe ser un
+                            número</div>
+                        <div id="numrango" class="form-text text-danger" style="visibility: hidden;">Error:Rango
+                            incorrecto</div>
+                    </div>
+                    <div class="d-grid mt-3">
+                        <button type="submit" class="btn btn-primary">Calcular</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="validacion.js"></script>
+</body>
+
+</html>

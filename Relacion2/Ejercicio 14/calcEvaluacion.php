@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Calcular Evaluación</title>
+    <title>Ejercicio 8</title>
 </head>
 <body>
     <h2>Calcular la nota a partir de cuatro notas numéricas</h2>
@@ -38,6 +38,7 @@
         
         echo "<div class='card-footer mt-3'>";
         echo "<p class='mb-1'>Tu nota es: <span class='bg bg-primary text-white p-1 rounded'>$notaFinal</span></p>";
+        echo "<progress id='file' value='$notaFinal' max='10'></progress>";
         echo "</div>";
     ?>
 </body>
