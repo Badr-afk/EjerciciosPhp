@@ -22,7 +22,6 @@
         $cociente = intval($numero / $base);
         $numero = $cociente;
     }
-
     echo (string)$numero . '-' . $resultado;
 
     ?>
