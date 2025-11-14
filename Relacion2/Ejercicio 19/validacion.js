@@ -1,21 +1,10 @@
 function validarForm() {
-    let dividendo = parseFloat(document.getElementById('dividendo').value);
-    let divisor = parseFloat(document.getElementById('divisor').value);
-
+    let numero = parseFloat(document.getElementById('numero').value);
     var comprobador = true;
-    if (isNaN(dividendo)) {
-        marcarError('dividendo', "er1")
+    if (isNaN(numero)) {
+        marcarError('numero', "er1")
         comprobador = false;
-    } else if (dividendo===0) {
-        marcarError('dividendo', "er2")
-        comprobador = false
     }
-
-    if (isNaN(divisor)) {
-        marcarError('divisor', 'er1')
-        comprobador = false
-    }
-
     return comprobador
 }
 
