@@ -86,7 +86,6 @@
                 if (empty($error_msg)) {
 
                     /*
-                     * LÓGICA DE CONVERSIÓN DE BASE (CORREGIDA)
                      * El método consiste en divisiones sucesivas.
                      * Ejemplo: Convertir 10 (decimal) a base 2 (binario).
                      * * 10 / 2 = 5 (Resto: 0)
