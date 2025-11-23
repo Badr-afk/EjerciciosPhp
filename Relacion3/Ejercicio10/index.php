@@ -4,11 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 8</title>
+    <title>Ejercicio 9</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-light">
+    <?php
+    function palabraLarga($texto)
+    {
+        //Limpiar texto
+        $textoLimpio = preg_replace('/[[:punct:]]/', '', $texto);
+
+        //Dividir el texto en palabra para que a la hora de compararlo se más facil
+        $palabras = explode(' ', $textoLimpio);
+
+        //Inicializar la variable que contiene el la palabra más larga
+        $mayor = "";
+
+        foreach ($palabras as $palabra) {
+            if (trim($palabra) !== '') {
+                if (mb_strlen($palabra) > mb_strlen($mayor)) {
+                    $mayor = $palabra;
+                }
+            }
+        }
+
+        return $mayor;
+    }
+    ?>
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
@@ -23,18 +46,6 @@
                                 <input type="text" class="form-control" id="textoUsu" name="textoUsu" required>
                             </div>
 
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="mostrarOpcion" id="mayus" value="mayus">
-                                <label class="form-check-label" for="mayus">
-                                    Mostrar en mayusculas
-                                </label>
-                            </div>
-                            <div class="form-check"> <input class="form-check-input" type="radio" name="mostrarOpcion" id="minus" value="minus">
-                                <label class="form-check-label" for="minus">
-                                    Mostrar en minusculas
-                                </label>
-                            </div>
-
                             <div class="d-grid mt-3">
                                 <button type="submit" class="btn btn-primary">Mostrar</button>
                             </div>
@@ -42,21 +53,11 @@
                     </form>
 
                     <?php
-                    if (isset($_GET['textoUsu']) && isset($_GET['mostrarOpcion'])) {
+                    if (isset($_GET['textoUsu'])) {
                         $texto = $_GET['textoUsu'];
-                        $opcion = $_GET['mostrarOpcion'];
+                        $palabraLarga = palabraLarga($texto);
 
-                        $mensajeResultado = "";
-
-                        if ($opcion === 'mayus') {
-                            $textoMayus = strtoupper($texto);
-
-                            $mensajeResultado = 'El texto en mayusculas:' . $textoMayus;
-                        } elseif ($opcion === 'minus') {
-                            $textoMinus=strtolower($texto);
-
-                            $mensajeResultado = 'El texto en mayusculas:' . $textoMinus;
-                        }
+                        $mensajeResultado = "La palabra más larga es: **" . $palabraLarga . "**";
 
                         echo '<div class="card-footer bg-white">';
                         echo '<div class="alert alert-success m-0 text-center" role="alert">';
