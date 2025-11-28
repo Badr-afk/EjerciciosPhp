@@ -25,7 +25,7 @@
                     <?php
                     // Función auxiliar de intercambio (Swap)
                     function swap(&$a, &$b)
-                    {
+                    {   
                         $temp = $a;
                         $a = $b;
                         $b = $temp;
